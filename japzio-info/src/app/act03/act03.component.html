@@ -1,0 +1,17 @@
+<p>act03 works!</p>
+
+<p>activity 03 works!</p>
+<button class="btn btn-primary"
+type="button"
+(click)="onBtnClick($event)">
+Display Details ({{pVisibility}}) ({{clickEventsList.length}})
+</button>
+<p *ngIf="pVisibility">Secret Password = tuna</p>
+
+<li *ngFor="let e of clickEventsList" >
+    <p [ngStyle]="{'background-color': clickEventsList.indexOf(e) >= 4 ? 'blue':'red'}"
+        [ngClass]="{'alert primary': clickEventsList.indexOf(e) >= 4}">
+        {{e}}
+    </p>
+</li>
+ 
